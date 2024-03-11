@@ -38,7 +38,7 @@ class ListMenu {
           );
         },
         child: const Text('Pagamentos'),
-      )
+      ),
     ];
   }
 }
