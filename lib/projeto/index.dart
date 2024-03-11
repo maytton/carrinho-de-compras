@@ -44,7 +44,20 @@ class CarinhoCompras extends StatelessWidget {
                   )
                 ],
               ),
-              Container(),
+              SizedBox(
+                height: 400,
+                child: GridView.count(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  children: List.generate(
+                      9,
+                      (index) => Container(
+                            color: Colors.white,
+                          )),
+                ),
+              ),
               SizedBox(
                 width: 250,
                 child: TextButton(
