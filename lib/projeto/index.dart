@@ -1,3 +1,5 @@
+import 'package:carrinho_de_compras/widgets/container.dart';
+import 'package:carrinho_de_compras/widgets/list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -14,17 +16,8 @@ class CarinhoCompras extends StatelessWidget {
         title: const Text('Carrinho de Compras'),
       ),
       drawer: Drawer(
-        elevation: 50,
         child: ListView(
-          children: const [
-            UserAccountsDrawerHeader(
-              accountName: Text('Maytton Nascimento'),
-              accountEmail: Text('maytton7@gmail.com'),
-              currentAccountPicture: CircleAvatar(
-                child: Text('MN'),
-              ),
-            )
-          ],
+          children: ListMenu.get(context),
         ),
       ),
     );
