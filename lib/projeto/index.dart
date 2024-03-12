@@ -21,14 +21,14 @@ class CarinhoCompras extends StatelessWidget {
           ),
         ),
         body: Container(
-          color: Color.fromARGB(255, 221, 205, 230),
+          color: Color.fromARGB(255, 30, 0, 48),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const Column(
                 children: [
                   Text(
-                    'CARRINHO DO',
+                    'Carrinho do',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
@@ -36,10 +36,10 @@ class CarinhoCompras extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'MAYTTON',
+                    'Maytton',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 35,
+                        fontSize: 25,
                         color: Color.fromARGB(255, 255, 255, 255)),
                   )
                 ],
@@ -47,16 +47,36 @@ class CarinhoCompras extends StatelessWidget {
               SizedBox(
                 height: 400,
                 child: GridView.count(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  children: List.generate(
-                      9,
-                      (index) => Container(
-                            color: Colors.white,
-                          )),
-                ),
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    children: [
+                      card(
+                          img: 'assets/images/livro.png',
+                          nome: 'Livro',
+                          valor: '10'),
+                      card(
+                          img: 'assets/images/calculadora.png',
+                          nome: 'Calculadora',
+                          valor: '5,99'),
+                      card(
+                          img: 'assets/images/lapis.png',
+                          nome: 'Lápis',
+                          valor: '1,99'),
+                      card(
+                          img: 'assets/images/macbook.png',
+                          nome: 'MacBook',
+                          valor: '2999,99'),
+                      card(
+                          img: 'assets/images/xicara.png',
+                          nome: 'Xicara',
+                          valor: '25,50'),
+                      card(
+                          img: 'assets/images/iphone.png',
+                          nome: 'Iphone 13',
+                          valor: '2599,00')
+                    ]),
               ),
               SizedBox(
                 width: 250,
@@ -75,4 +95,36 @@ class CarinhoCompras extends StatelessWidget {
           ),
         ));
   }
+}
+
+Widget card(
+    {required String img, required String nome, required String valor}) {
+  return Container(
+    decoration: const BoxDecoration(
+      color: Color.fromARGB(255, 255, 255, 255),
+      borderRadius: BorderRadius.all(
+        Radius.circular(10),
+      ),
+    ),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Image.asset(img),
+        Text(
+          nome,
+          style: const TextStyle(
+            color: Color.fromARGB(255, 5, 5, 5),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          'R\$$valor',
+          style: const TextStyle(
+              color: Color.fromARGB(255, 0, 0, 0),
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
+        )
+      ],
+    ),
+  );
 }
