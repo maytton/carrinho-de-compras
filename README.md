@@ -1,6 +1,6 @@
-# carrinho_de_compras
+# Carinho de Compras
 
-A new Flutter project.
+Este é um exemplo básico de um aplicativo de carrinho de compras construído usando o framework Flutter. Este aplicativo demonstra como criar um carrinho de compras simples, onde os usuários podem visualizar os itens do carrinho.
 
 ## Getting Started
 
